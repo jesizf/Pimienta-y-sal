@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <%- include('./partials/head') %>
+  <body>
+    <!-- Navbar (sit on top) -->
+    <%- include('./partials/navbar') %>
+   
+    <!-- Page content -->
+    <div class="ps-content">
+
+      <!-- Menu Section -->
+      <div class="ps-row ps-padding-64" id="menu">
+        <div class="ps-col l6 ps-padding-large">
+          
+            <h3><%=producto.name%></h3></a> 
+         
+            <% if (producto.description) { %> <p class="ps-text-grey ps-padding-12"><%=producto.description %> </p> <% } else { %><p>Plato típico</p><% } %>
+          
+      <p class="ps-center ps-light-grey ps-padding-36"> Precio: u$s<%=producto.price.toFixed(2)%></p>
+           
+        </div>
+
+        <div class="ps-col l6 ps-padding-large ps-img-menu">
+          <img
+            src="/images/<%=producto.image%>"
+            class="ps-round ps-image ps-opacity-min"
+            alt="Menu" 
+          />
+        </div>
+      </div>
+
+
+      <!-- Footer -->
+      <%- include('./partials/footer') %>
+    </div>
+  </body>
+</html>
